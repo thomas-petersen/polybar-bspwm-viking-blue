@@ -10,4 +10,5 @@ Menu Module in Polybar is for jgmenu, install it with sudo pacman -S jgmenu
 prefix in polybar is using font: 
 FontAwesome and FontAwesome5Brands
 
+icon theme: Sardi-Ghost-Flexible-Viking
 
