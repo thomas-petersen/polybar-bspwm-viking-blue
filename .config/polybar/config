@@ -42,16 +42,16 @@ format-offset =
 ; Own theme ============
 ;background = #000000
 ;foreground = #ccffff
-;alert = #d08770
+;alert = #858980
 ;volume-min = #a3be8c
 ;volume-med = #ebcb8b
 ;volume-max = #bf616a
 ; =======================
 
-; Green theme ============
-background = #000000
-foreground = #66ff66
-alert = #d08770
+; Viking Blue theme ============
+background = #66000000
+foreground = #62c5df
+alert = #858980
 volume-min = #a3be8c
 volume-med = #ebcb8b
 volume-max = #bf616a
@@ -60,7 +60,7 @@ volume-max = #bf616a
 ; Nord theme ============
 ;background = #2F343F
 ;foreground = #f3f4f5
-;alert = #d08770
+;alert = #858980
 ;volume-min = #a3be8c
 ;volume-med = #ebcb8b
 ;volume-max = #bf616a
@@ -407,11 +407,11 @@ modules-right = filesystem
 [bar/mainbar-bspwm]
 monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
-width = 100%
+width = 98%
 height = 30
-offset-x = 0%
-offset-y = 0%
-radius = 0.0
+offset-x = 1%
+offset-y = 0.5%
+radius = 8.0
 fixed-center = true
 bottom = false
 #separator = 
@@ -432,9 +432,9 @@ enable-ipc = true
 border-size = 0
 ;border-left-size = 0
 ;border-right-size = 0
-;border-top-size = 0
-;border-bottom-size = 1
-border-color = #00000000
+;border-top-size = 2
+;border-bottom-size = 0
+border-color = #66000000
 
 padding-left = 5
 padding-right = 5
@@ -453,16 +453,16 @@ font-5 = "Noto Sans:size=14;0"
 modules-left = bspwm
 modules-center = time
 #modules-center = spotify2 spotify-prev spotify-play-pause spotify-next
-modules-right = volume weather memory2 cpu2 jgmenu monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
+modules-right = volume weather variety memory2 cpu2 jgmenu arch-updates monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
 
-tray-detached = true
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 1
-tray-maxsize = 20
-tray-scale = 1.0
-tray-position = right
-tray-background = ${colors.background}
+#tray-detached = true
+#tray-offset-x = 0
+#tray-offset-y = 0
+#tray-padding = 1
+#tray-maxsize = 20
+#tray-scale = 1.0
+#tray-position = right
+#tray-background = ${colors.background}
 
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
@@ -477,16 +477,16 @@ scroll-down = bspwm-deskprev
 [bar/mainbar-bspwm-extra]
 monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
-width = 100%
+width = 50%
 height = 30
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
-fixed-center = true
+offset-x = 25%
+offset-y = 0.5%
+radius = 8.0
+fixed-center = false
 bottom = true
 separator = |
 
-background = ${colors.background}
+background = #00000000
 foreground = ${colors.foreground}
 
 line-size = 2
@@ -499,15 +499,15 @@ override-redirect = true
 ; See the Messaging wiki page for more details.
 enable-ipc = true
 
-border-size = 0
-;border-left-size = 0
-;border-right-size = 25
+border-size = 2
+border-left-size =
+border-right-size =
 ;border-top-size = 0
-;border-bottom-size = 25
+border-bottom-size = 2
 border-color = #00000000
 
-padding-left = 0
-padding-right = 1
+padding-left = 3
+padding-right = 3
 
 module-margin-left = 3
 module-margin-right = 3
@@ -517,10 +517,13 @@ font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
+font-4 = "Material Icons:size=14;0"
+font-5 = "Noto Sans:size=14;0"
+font-6 = "FontAwesome5Brands :size=15;0"
 
-modules-left = load-average
-modules-center = networkspeeddown networkspeedup
-modules-right = filesystem
+modules-left =
+modules-center = Rofi Thunar Atom Subl Telegram Discord Vivaldi Thunderbird Calendar powermenu
+modules-right =
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -544,7 +547,7 @@ scroll-down = bspwm-deskprev
 [bar/mainbar-herbstluftwm]
 monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
-width = 100%
+width = 98%
 height = 30
 ;offset-x = 1%
 ;offset-y = 1%
@@ -579,7 +582,8 @@ padding-right = 1
 module-margin-left = 3
 module-margin-right = 3
 
-;https://github.com/jaagr/polybar/wiki/Fonts
+;https://github.com/jaagr/polybar/wiki/Fontsformat-foreground = ${colors.foreground}
+format-background = ${colors.background}
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
@@ -1083,12 +1087,12 @@ label-focused = %icon%
 label-focused-background = ${colors.background}
 #label-focused-underline= #b29fdb
 label-focused-padding = 1
-label-focused-foreground = #b26fdb
+label-focused-foreground = #858980
 
 label-occupied = %icon%
 label-occupied-padding = 1
 label-occupied-background = ${colors.background}
-label-occupied-foreground = #d81860
+label-occupied-foreground = #B0E879
 
 label-urgent = %icon%
 label-urgent-padding = 2
@@ -1132,13 +1136,15 @@ format-background = ${colors.background}
 [module/arch-updates]
 type = custom/script
 exec = ~/.config/polybar/scripts/check-arch-updates.sh
-interval = 1000
+interval = 500
 label = Arch: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
+format-prefix-foreground = #858980
+format-underline = #00000000
+
+################################################################################
 
 [module/aur-updates]
 type = custom/script
@@ -1203,7 +1209,7 @@ bar-empty = ─
 [module/battery]
 ;https://github.com/jaagr/polybar/wiki/Module:-battery
 type = internal/battery
-battery = BAT0
+battery = BAT062c5df
 adapter = AC0
 full-at = 100
 
@@ -1306,8 +1312,8 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #66ff66
-#format-underline = #66ff66
+format-prefix-foreground = #858980
+#format-underline = #62c5df
 
 label-font = 3
 
@@ -1481,7 +1487,7 @@ format-prefix-foreground = #6666cc
 [module/jgmenu]
 type = custom/script
 interval = 120
-exec = echo "ArcoLinux"
+exec = echo "Menu"
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -1552,8 +1558,8 @@ label = %percentage_used%%
 
 format = Mem <label>
 format-prefix = "  "
-format-prefix-foreground = #66ff66
-#format-underline = #66ff66
+format-prefix-foreground = #858980
+#format-underline = #62c5df
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
@@ -1853,8 +1859,8 @@ tail = true
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = ""
-format-prefix-foreground = #FFFFF
-format-underline = #0084FF
+format-prefix-foreground = #858980
+format-underline = #00000000
 click-right = variety --preferences
 click-left = variety --selector
 
@@ -1866,17 +1872,17 @@ type = internal/volume
 format-volume = "<label-volume>  <bar-volume>"
 
 label-volume = " "
-label-volume-foreground = #66ff66
+label-volume-foreground = #858980
 label-muted = muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #b29fdb
-bar-volume-foreground-1 = #b29fdb
-bar-volume-foreground-2 = #b29fdb
-bar-volume-foreground-3 = #b29fdb
-bar-volume-foreground-4 = #b29fdb
-bar-volume-foreground-5 = #b29fdb
-bar-volume-foreground-6 = #b29fdb
+bar-volume-foreground-0 = #858980
+bar-volume-foreground-1 = #858980
+bar-volume-foreground-2 = #858980
+bar-volume-foreground-3 = #858980
+bar-volume-foreground-4 = #858980
+bar-volume-foreground-5 = #858980
+bar-volume-foreground-6 = #858980
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 2
@@ -1899,8 +1905,8 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix = " "
-format-prefix-foreground = #66ff66
-#format-underline = #66ff66
+format-prefix-foreground = #858980
+#format-underline = #62c5df
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
@@ -2052,9 +2058,185 @@ exec = date "+%A %d-%m-%Y %H:%M"
 tail = true
 click-left = termite -e calcurse
 format-prefix = " "
-format-prefix-foreground = #66ff66
-#format-underline = #66ff66
+format-prefix-foreground = #858980
+#format-underline = #62c5df
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 ;label = "%A %d-%m-%Y%"
 label-font = 6
+
+################################################################################
+
+[module/Atom]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = atom
+
+################################################################################
+
+[module/Subl]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = subl3
+
+################################################################################
+
+[module/Vivaldi]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = vivaldi-stable
+
+################################################################################
+
+[module/Telegram]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = telegram-desktop
+
+################################################################################
+
+[module/Discord]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = discord
+
+################################################################################
+
+[module/Thunderbird]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = thunderbird
+
+################################################################################
+
+[module/brave]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = discord
+
+################################################################################
+
+[module/Calendar]
+type = custom/script
+exec = echo " "
+;exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = termite -e calcurse
+
+################################################################################
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 4
+format-foreground = ${colors.foreground}
+format-background = #00000000
+label-open = 
+label-close =
+label-active-font = 2
+menu-0-0 = "  Reboot"
+menu-0-0-exec = systemctl reboot
+menu-0-1 = "  Shutdown"
+menu-0-1-exec = systemctl poweroff
+menu-0-2 = "  Logout"
+menu-0-2-exec = arcolinux-logout
+
+################################################################################
+
+[module/Rofi]
+type = custom/script
+exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = rofi -show run
+
+################################################################################
+
+[module/Thunar]
+type = custom/script
+exec = echo " "
+interval = 1
+tail = true
+format-foreground = ${colors.foreground}
+format-background = #00000000
+format-prefix = ""
+format-prefix-foreground = #FFFFF
+format-underline = #00000000
+click-right =
+click-left = thunar
